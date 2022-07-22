@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <form>
-      <input type="text" class="input" v-model="country" @input="getCountry">
+    <form @submit="getCountry">
+      <input type="text" class="input" v-model="country">
     </form>
   </div>
 </template>
@@ -13,7 +13,8 @@ export default {
   name: "InputCountry",
   setup(){
     const country = ref("");
-    const getCountry = async () => {
+    const getCountry = async (e) => {
+      e.preventDefault();
       store.dispatch("loadCovidDataApi",country.value);
     }
 
