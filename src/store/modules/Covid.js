@@ -4,8 +4,8 @@ import moment from "moment";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "39a010bd9dmsh633f803ccd87845p1b19b1jsn380f85551861",
-    "X-RapidAPI-Host": "covid-19-coronavirus-statistics.p.rapidapi.com",
+    "X-RapidAPI-Key": process.env.VUE_APP_API_KEY,
+    "X-RapidAPI-Host": process.env.VUE_APP_API_HOST,
   },
 };
 
